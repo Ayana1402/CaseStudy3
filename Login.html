@@ -48,21 +48,28 @@
 
 <!-- LOGIN -->
 <div class="container mt-5 mb-5 py-3">
-  <form>
+  <form action="index.html">
     <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <label>Email address</label>
+      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email" onfocus="change_email()" onblur="hide_email()" required>
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      <span id="errormail"></span>
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <label>Password</label>
+      <input type="password" class="form-control" id="pswd" placeholder="Password" onfocus="change_pswd()" onblur="hide_pswd()" required>
     </div>
+    <div class="form-group">
+      <span id="errorpswd"></span>
+      <span id="StrengthDisp" class="badge displayBadge">Weak</span>
+      <br>
+    </div>
+
     <div class="form-group form-check">
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
       <label class="form-check-label" for="exampleCheck1">Remember me</label>
     </div>
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="submit" class="btn btn-success" onclick=" return validate()">Submit</button>
   </form>
 </div>
 
@@ -155,3 +162,6 @@
       </div>
     </footer>
   </div>
+  <script src="script.js"></script>
+  <script src="validation.js"></script>
+</body>
