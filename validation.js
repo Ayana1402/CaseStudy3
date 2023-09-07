@@ -8,7 +8,7 @@ var regexp1 = /^([a-zA-z0-9\.-]+)@([a-zA-z0-9\-]+).([a-z]{2,3})(.\[a-z]{2,3})?$/
 var regexphone = /^\+?([0-9]{3})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
 function validate(){
     console.log('form submitted')
-    validatephone()
+    
 
     if(email.value == ''){
         errormail.innerText = "Email field is empty"
@@ -27,7 +27,7 @@ function validate(){
      {
         validatepass()
      }
-    
+     validatephone()
       
 }
 
